@@ -1,1 +1,1 @@
-Please see https://wfinstances-browser.github.io/ for the home page.
+Please see https://wfinstances.github.io/ for the home page.
