@@ -1,6 +1,8 @@
-Please see https://wfinstances.github.io/ for the home page
+Please see https://wfinstances.github.io/ for the WfInstances user and developer guide home page. 
 
-# Meeting Minutes
+Below is a summarized outlook of what was discussed in the sponsor meetings between [our team](https://github.com/orgs/WfInstances/repositories) and [Professor Henri Casanova](https://henricasanova.github.io/)
+
+## Meeting Minutes
 #### Team: Jianlong Chen, Kenneth de Guzman
 
 ---
@@ -52,9 +54,8 @@ Actions:
 ### Meeting 4 (Week 4: 2/11 - 2/15)
 
 Business:
-- 
 
 
 Actions:
-- 
+
 
