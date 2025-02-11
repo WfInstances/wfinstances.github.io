@@ -1,4 +1,4 @@
 remote_theme: pages-themes/cayman@v0.2.0
-description: ...
+description: A user and developer guide to the WfInstances browser!
 plugins:
 - jekyll-remote-theme 
