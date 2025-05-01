@@ -6,6 +6,7 @@
 * [Issues Development History](#issues-development-history)
 * [Weekly Progression](#weekly-progression)
 * [Team](#team)
+* [Organization](#organization)
 
 ## Overview
 
