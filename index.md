@@ -15,11 +15,31 @@ The WfInstances Browser is a web application that allows users to browse, select
 
 In the WfInstances Browser, users are able to download, visualize, and simulate workflow instances. Additional modals are located on the navbar for usage report, app help, an about section, and the option to toggle between light and dark mode. 
 
-![Usage Modal](img/usage_report_modal.PNG "Usage Report")
-![Help... Modal](img/help_modal.PNG "Help Modal")
-![About... Modal](img/about_modal.PNG "About Modal")
-![Light Mode](img/light_mode.PNG "Light Mode")
-![Dark Mode](img/dark_mode.PNG "Dark Mode")
+<figure align="center">
+  <figcaption><em>Figure 1. Usage Modal</em></figcaption>
+  <img src="img/usage_report_modal.PNG" alt="Usage Modal"/>
+</figure>
+
+<figure align="center">
+  <figcaption><em>Figure 2. Help… Modal</em></figcaption>
+  <img src="img/help_modal.PNG" alt="Help Modal"/>
+</figure>
+
+<figure align="center">
+  <figcaption><em>Figure 3. About… Modal</em></figcaption>
+  <img src="img/about_modal.PNG" alt="About Modal"/>
+</figure>
+
+<figure align="center">
+  <figcaption><em>Figure 4. Light Mode</em></figcaption>
+  <img src="img/light_mode.PNG" alt="Light Mode"/>
+</figure>
+
+<figure align="center">
+  <figcaption><em>Figure 5. Dark Mode</em></figcaption>
+  <img src="img/dark_mode.PNG" alt="Dark Mode"/>
+</figure>
+
 
 ## Developer Guide
 
@@ -50,41 +70,51 @@ REST API documentation is available at: [http://localhost:8081/docs](http://loca
 (The above assumes WFINSTANCES_API_PORT=8081 is the configured port for the backend, as condigured in the `.env-*` file in use.)
 
 ## Issues Development History 
+---
 ### issue-001: Usage Stats Modal
 - Created the modal for usage report and added it to the navbar
 - Imported button icon from React Bootstrap
 - Opens a modal which will store app usage information
+  
 ### issue-002: UI shows data from API fetch 
 - Created new API endpoint to show total count each for downloads, visualizations and simlulations
 - Usage report displays data fetched from url route: .../usage/public/totals
 - Modal shows total number of downloads, visualizations and simulations
+  
 ### issue-003: User Survey 
 - Created a button that opens a questionnaire modal within the navbar
 - Imported pencil icon for button from React Bootstrap
 - Currently is not connected to a database
 - Asks the user for to provide a name, email, and app feedback
+  
 ### issue-004: API endpoint for weekly usage
 - Created new endpoint to get weekly usage data grouped by their type (download, visualization, simulation)
-- Also retrieves the number of unique IPs per week 
+- Also retrieves the number of unique IPs per week
+  
 ### issue-005: Graph Visualization
 - Implemented a graph feature using Chart.js to visualize the total count of what was used in the app 
 - Fetches weekly data for downloads, visualizations, and simulations based on the selected type
 - Buttons allow to toggle between the three different types of usage
+  
 ### issue-006: IPInfo IP Geolocation Tracking
 - Enabled IP geolocation to see which countries use the app the most
 - Resolves user IP to a country name
+  
 ### issue-007: Sidebar for the top usage countries
 - Added a sidebar within the usage report modal that displays the countries that have used the app the most
 - Uses IP geolocation from previous issue to resolve a user's IP to a country name if they used an app feature
 - Displays top ten countries based on combined usage (downloads, visualization, simulation)
+  
 ### issue-008: Timescale feature
 - Implemented a timescale feature for the graph
 - Users can zoom/pan out of the chart to see data from a particular time more in-depth
+  
 ### issue-009: UI adjustments
 - Updated the UI to make it look more cohesive and easier to navigate
 - Data is fetched in parallel to make it faster
 - Graph is made bigger (left side for the graph, right side for the top countries sidebar)
 - Section for totals at the bottom of the modal's left column for combined count each for downloads, visualizations, and simulations
+  
 ### issue-010: API endpoint for monthly usage
 - Changed how data is retrieved from weekly to monthly usage
 - Created new endpoint to get monthly usage data grouped by their type (download, visualization, simulation)
@@ -94,19 +124,23 @@ REST API documentation is available at: [http://localhost:8081/docs](http://loca
 - “On a scale of 1 to 10 how would you rate the usefulness of this application?” when occasionally prompted
 - “On a scale of 1 to 10 how would you rate the usability of this application?” when occasionally prompted
 - Added a survey database to account for total user clicks, IP, and rating number
+  
 ### issue-012: Updated the graph's legend
 - Changed chart legend to use a line representation instead of a square
 - Used rgba(75, 192, 192, 0.2) for download/visualization/simulation solid line
 - Used rgba(255, 99, 132, 0.2) for unique IPs dotted line
 - Updated pan feature so you can pan both left/right and up/down on the graph
+  
 ### issue-013: Redesign of workflow instances retrieval
 - Use git clone and git pull to update the workflow instances
 - Cron job to git pull every hour instead of every 7 days
 - Git cloning instance of repo for WfInstances functions as intended
 - Clones repo if it does not exist locally
+  
 ### issue-014: Filter the graph's date range
 - Replaced the zoom/pan feature of the graph to have a filter date range instead
 - Allows users to select MM/YY - MM/YY range to view the timescale only within that scope
+  
 ### issue-015: Satisfaction database
 - Implemented a satisfaction database to store the results of the user survey ratings
 - Ratings range from 1 to 10
@@ -114,8 +148,9 @@ REST API documentation is available at: [http://localhost:8081/docs](http://loca
 
 ## Weekly Progression
 ---
-### Meeting 1 (Week: 1/21 - 1/27)
+Below is a summarized outlook of our progress and the discussions in the sponsor meetings between our team and [Professor Henri Casanova](https://henricasanova.github.io/)
 
+### Meeting 1 (Week: 1/21 - 1/27)
 Date: Tuesday, 1/21/25
 
 Business:
@@ -128,9 +163,9 @@ Actions:
 - Forked WfInstances-browser repo
 - Ran the app and populated the database
 - Added a usage report button that opens a popup with placeholder text
+  
 ---
 ### Meeting 2 (Week: 1/28 - 2/3)
-
 Date: Tuesday, 1/28/25
 
 Business: 
@@ -144,9 +179,9 @@ Actions:
 - Modified UsageStatsModal.tsx to fetch data from the totals endpoint
 - Went over how to show data better (graph, tabs for separate collections)
 - Created button for user survey questionnaire
+  
 ---
 ### Meeting 3 (Week: 2/4 - 2/10)
-
 Date: Tuesday, 2/4/25 
 
 Business: 
@@ -158,9 +193,9 @@ Actions:
 - Created a new API endpoint for weekly usage data grouped by their type
 - Implemented a linen chart graph for showing the frequency of what is used on the site
 - Added buttons to switch between the three different usage types (downloads, visualizations, simulations)
+  
 ---
 ### Meeting 4 (Week: 2/11 - 2/17)
-
 Date: Tuesday, 2/11/25
 
 Business:
@@ -173,9 +208,9 @@ Actions:
 - Edited get_ip_country_name in service.py to take in IP and return country name
 - Added get_top_countries function in service.py to return top 10 countries where features are used most
 - Added new endpoints for showing all distinct IPs and their country names and for showing top countries based on combined usage
+  
 ---
 ### Meeting 5 (Week: 2/18 - 2/24)
-
 Date: Tuesday, 2/18/25
 
 Business: 
@@ -186,9 +221,9 @@ Actions:
 - Changed the usage graph to show data by month 
 - Added another line in graph for distinct IPs for a month
 - Fetch all data in parallel to make it faster
+  
 ---
 ### Meeting 6 (Week: 2/25 - 3/3)
-
 Date: Tuesday, 2/25/25
 
 Business: 
@@ -200,9 +235,9 @@ Actions:
 - Added timescale feature to zoom in on the usage graph
 - Make graph legend use lines instead of square/rectangle for representation
 - Change modal size and chart zoom/pan sensitivity
+  
 ---
 ### Meeting 7 (Week: 3/4 - 3/10)
-
 Date: Tuesday, 3/4/25
 
 Business: 
@@ -215,9 +250,9 @@ Actions:
 - Implemented the new approach for retrieving the WfCommons workflow instances
 - Git cloning instance of repo for WfInstances functions as intended
 - Clones repo if it does not exist locally
+  
 ---
 ### Meeting 8 (Week: 3/11 - 3/17)
-
 Date: Tuesday, 3/11/25
 
 Business:
@@ -229,9 +264,9 @@ Actions:
 - Added a surveys collection to account for total user clicks that triggers the pop-up survey
 - Survey currently asks the user to rate the app with a number from 1 to 10
 - Implemented the filter date range feature for analyzing the graph's usage stats
+  
 ---
 ### Meeting 9 (Week: 3/25 - 3/31)
-
 Date: Tuesday, 3/25/25
 
 Business: 
@@ -244,9 +279,9 @@ Actions:
 - Moved and copied the files, commits and project board over to the new wfinstances-browser repo
 - Implemented the satisfaction database to for keeping track of score distribution
 - User survey now asks for two ratings for the app; one for usefulness and the other for usability
+  
 ---
 ### Meeting 10 (Week: 4/1 - 4/7)
-
 Date: Tuesday, 4/1/25
 
 Business: 
@@ -256,10 +291,10 @@ Business:
 Actions:
 - Developed a GitHub action that periodically updates the README of the wfcommons/WfInstances repo
 - README uses shields.io badges to show usage report from WfInstances Browser
-- Shows total number of users, visualizations, simulations, and downloads 
+- Shows total number of users, visualizations, simulations, and downloads
+  
 ---
 ### Meeting 11 (Week: 4/8 - 4/14)
-
 Date: Tuesday, 4/8/25
 
 Business: 
@@ -268,9 +303,9 @@ Business:
 
 Actions:
 - Started to work on creating a draft version for the poster
+  
 ---
 ### Meeting 12 (Week: 4/15 - 4/22)
-
 Date: Tuesday, 4/15/22
 
 Business: 
