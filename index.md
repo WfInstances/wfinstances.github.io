@@ -15,28 +15,32 @@ The WfInstances Browser is a web application that allows users to browse, select
 
 In the WfInstances Browser, users are able to download, visualize, and simulate workflow instances. Additional modals are located on the navbar for usage report, app help, an about section, and the option to toggle between light and dark mode. 
 
-<figure align="center">
-  <figcaption><em>Figure 1. Usage Modal</em></figcaption>
+<figure style="text-align:left;">
+  <figcaption style="color:black;"><em>Figure 1. Usage Modal</em></figcaption>
   <img src="img/usage_report_modal.PNG" alt="Usage Modal"/>
 </figure>
 
-<figure align="center">
-  <figcaption><em>Figure 2. Help… Modal</em></figcaption>
+
+<figure style="text-align:left;">
+  <figcaption style="color:black;"><em>Figure 2. Help… Modal</em></figcaption>
   <img src="img/help_modal.PNG" alt="Help Modal"/>
 </figure>
 
-<figure align="center">
-  <figcaption><em>Figure 3. About… Modal</em></figcaption>
+
+<figure style="text-align:left;">
+  <figcaption style="color:black;"><em>Figure 3. About… Modal</em></figcaption>
   <img src="img/about_modal.PNG" alt="About Modal"/>
 </figure>
 
-<figure align="center">
-  <figcaption><em>Figure 4. Light Mode</em></figcaption>
+
+<figure style="text-align:left;">
+  <figcaption style="color:black;"><em>Figure 4. Light Mode</em></figcaption>
   <img src="img/light_mode.PNG" alt="Light Mode"/>
 </figure>
 
-<figure align="center">
-  <figcaption><em>Figure 5. Dark Mode</em></figcaption>
+
+<figure style="text-align:left;">
+  <figcaption style="color:black;"><em>Figure 5. Dark Mode</em></figcaption>
   <img src="img/dark_mode.PNG" alt="Dark Mode"/>
 </figure>
 
