@@ -1,115 +1,124 @@
-## Table of contents
+## Table of Contents
 
 * [Overview](#overview)
 * [User Guide](#user-guide)
 * [Developer Guide](#developer-guide)
-* [Remix Development](#remix-development)
 * [Development History](#development-history)
-* [Walkthrough videos](#walkthrough-videos)
-* [Example enhancements](#example-enhancements)
 * [Team](#team)
 
 ## Overview
 
-The WfInstances browser is a web application that allows users to browse, select, and visualize the available [Workflow Instances](https://github.com/wfcommons/WfInstances) provided by the [WFCommons Project](https://wfcommons.org). 
+The WfInstances Browser is a web application that allows users to browse, select, and visualize the available [workflow instances](https://github.com/wfcommons/WfInstances) provided by the [WFCommons Project](https://wfcommons.org). It is currently live in deployment at [https://wfinstances.ics.hawaii.edu/](https://wfinstances.ics.hawaii.edu/).
 
 ## User Guide
 
-Users are able to download, visualize, and simulate workflow instances. There are additional buttons for features located on the navbar for: usage statistics report, user survey, site support, an about section and an option for a light/dark mode. 
+In the WfInstances Browser, users are able to download, visualize, and simulate workflow instances. Additional modals are located on the navbar for usage report, app help, an about section, and the option to toggle between light and dark mode. 
 
 ## Developer Guide
 
 To run the server for production, you will need [Docker Desktop](https://www.docker.com/).
 
-1. Download the [repo](https://github.com/WfInstances/wfinstances-browser) onto your local machine from GitHub.
-2. Go into your local machine's directory where the wfinstances-browser is located. (cd ...)
-3. Run the command:
-```
-docker-compose up
+Running with Docker; 
+
+Dependencies:
+- [Docker](https://docs.docker.com/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+Edit/use one of the `.env-*` files to configure the deployment, and then:
+
+```bash
+$ docker-compose --env-file <.env file> build  --no-cache
+$ docker-compose up [-d]
 ```
 
-This will build Docker images, run containers and starts a Web server on which
-the browser can be accessed at [http://localhost](http://localhost).
+The above will not run any Nginx front-end. If you want to do so, you must add the `--profile with-my-own-nginx` argument to the `docker-compose` commands above.
 
 The database is empty the first time you launch the browser. To populate the database with metrics from the official [WfCommons WfInstances GitHub repo](https://github.com/wfcommons/WfInstances), run this command in a terminal on the machine running the server:
 ```
 curl -X PUT http://localhost:8081/metrics/private/github/wfcommons/WfInstances
 ```
 
-## Remix Development 
+REST API documentation is available at: [http://localhost:8081/docs](http://localhost:8081/docs)
 
-Making changes to the UI is supported by Remix's hot reloading so that there is faster iteration and rapid development without doing a full rebuild. 
-
-1. Go in the directory where the repo is located on your local macine (cd ...)
-2. From your terminal:
-
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-3. Build your app for production:
-
-```sh
-npm run build
-```
-4. Then run the app in production mode:
-
-```sh
-npm start
-```
-
-5. Pick a host to deploy it to.
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
+(The above assumes WFINSTANCES_API_PORT=8081 is the configured port for the backend, as condigured in the `.env-*` file in use.)
 
 ## Development History 
 
-### Issue-001: Usage statistics 
+### issue-001: Usage Stats Modal
+- Created the modal for usage report and added it to the navbar
+- Imported button icon from React Bootstrap
+- Opens a modal which will store app usage information
 
-- Implemented the usage report button onto the navbar
-- Has a button icon
-- Opens a popup where usage stats information are shown
-
-### Issue-002: UI shows data from API fetch 
-
+### issue-002: UI shows data from API fetch 
 - Created new API endpoint to show total count each for downloads, visualizations and simlulations
-- Usage report shows data fetched from localhost/usage/public/totals
-- Button shows total number of downloads, visualizations and simulations
+- Usage report displays data fetched from url route: .../usage/public/totals
+- Modal shows total number of downloads, visualizations and simulations
 
-### Issue-003: User survey 
+### issue-003: User Survey 
+- Created a button that opens a questionnaire modal within the navbar
+- Imported pencil icon for button from React Bootstrap
+- Currently is not connected to a database
+- Asks the user for to provide a name, email, and app feedback
 
-- Implemented the questionnaire button onto the navbar
-- Not connected to collection yet
-- Asks for name, email, and feedback
-
-### Issue-004: Weekly usage API endpoint
-
+### issue-004: API endpoint for weekly usage
 - Created new endpoint to get weekly usage data grouped by their type (download, visualization, simulation)
+- Also retrieves the number of unique IPs per week 
 
-### Issue-005: Line chart graph
+### issue-005: Graph Visualization
+- Implemented a graph feature using Chart.js to visualize the total count of what was used in the app 
+- Fetches weekly data for downloads, visualizations, and simulations based on the selected type
+- Buttons allow to toggle between the three different types of usage
 
-- Implemented a graph using Chart.js to visualize the total count of what was used in the site 
-- Fetches weekly data for downloads, visualizations, and simulations based on selected type
-- Has buttons to switch between the three different types of usage
+### issue-006: IPInfo IP Geolocation Tracking
+- Enabled IP geolocation to see which countries use the app the most
+- Resolves user IP to a country name
 
-## Walkthrough videos
+### issue-007: Sidebar for the top usage countries
+- Added a sidebar within the usage report modal that displays the countries that have used the app the most
+- Uses IP geolocation from previous issue to resolve a user's IP to a country name if they used an app feature
+- Displays top ten countries based on combined usage (downloads, visualization, simulation)
 
-...
+### issue-008: Timescale feature
+- Implemented a timescale feature for the graph
+- Users can zoom/pan out of the chart to see data from a particular time more in-depth
 
-## Example enhancements
+### issue-009: UI adjustments
+- Updated the UI to make it look more cohesive and easier to navigate
+- Data is fetched in parallel to make it faster
+- Graph is made bigger (left side for the graph, right side for the top countries sidebar)
+- Section for totals at the bottom of the modal's left column for combined count each for downloads, visualizations, and simulations
 
-1. Git clone of repo and keep JSONs locally. Refactor way we look at workflow instances and disable outside route of we get usage statistics
-2. Add rating system to user survey
-3. Add collection for rating system used in user survey
-4. Show unique IPs on a world map based on what they used on the site
+### issue-010: API endpoint for monthly usage
+- Changed how data is retrieved from weekly to monthly usage
+- Created new endpoint to get monthly usage data grouped by their type (download, visualization, simulation)
+
+### issue-011: Random Survey Pop-up
+- A random survey will pop-up when user has used download, visualization, and simulation on the 5th, 50th and 500th event
+- Asks two questions to give the app a rating based on usability and usefulness
+- “On a scale of 1 to 10 how would you rate the usefulness of this application?” when occasionally prompted
+- “On a scale of 1 to 10 how would you rate the usability of this application?” when occasionally prompted
+- Added a survey database to account for total user clicks, IP, and rating number
+
+### issue-012: Updated the graph's legend
+- Changed chart legend to use a line representation instead of a square
+- Used rgba(75, 192, 192, 0.2) for download/visualization/simulation solid line
+- Used rgba(255, 99, 132, 0.2) for unique IPs dotted line
+- Updated pan feature so you can pan both left/right and up/down on the graph
+
+### issue-013: Redesign of workflow instances retrieval
+- Use git clone and git pull to update the workflow instances
+- Cron job to git pull every hour instead of every 7 days
+- Git cloning instance of repo for WfInstances functions as intended
+- Clones repo if it does not exist locally
+
+### issue-014: Filter the graph's date range
+- Replaced the zoom/pan feature of the graph to have a filter date range instead
+- Allows users to select MM/YY - MM/YY range to view the timescale only within that scope
+
+### issue-015: Satisfaction database
+- Implemented a satisfaction database to store the results of the user survey ratings
+- Ratings range from 1 to 10
+- The collection is used to keep track of score distribution for app features (simulations, visualizations, general usage)
 
 ## Team 
 
