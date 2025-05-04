@@ -10,7 +10,7 @@
 
 ## Overview
 
-The WfInstances Browser is a web application that allows users to browse, select, and visualize the available [workflow instances](https://github.com/wfcommons/WfInstances) provided by the [WFCommons Project](https://wfcommons.org). It is currently live in deployment at [https://wfinstances.ics.hawaii.edu/](https://wfinstances.ics.hawaii.edu/).
+The WfInstances Browser is a web application that allows users to browse, select, and visualize the available [workflow instances](https://github.com/wfcommons/WfInstances) provided by the [WfCommons Project](https://wfcommons.org). It is currently live in deployment at [https://wfinstances.ics.hawaii.edu/](https://wfinstances.ics.hawaii.edu/).
 
 ## User Guide
 
@@ -310,11 +310,11 @@ Actions:
 - Started to work on creating a draft version for the poster
   
 ---
-### Meeting 12 (Week: 4/15 - 4/22)
+### Meeting 12 (Week: 4/15 - 4/21)
 Date: Tuesday, 4/15/22
 
 Business: 
-- Meeting to discuss progress on poster draft
+- Final meeting to discuss progress on poster draft
 - Discussed how to best orient the components of the poster
 
 Actions: 
