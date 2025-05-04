@@ -153,7 +153,7 @@ REST API documentation is available at: [http://localhost:8081/docs](http://loca
 
 ## Weekly Progression
 ---
-Below is a summarized outlook of our progress and the discussions in the sponsor meetings between our team and [Professor Henri Casanova](https://henricasanova.github.io/)
+Below is a summarized outlook of our progress and the discussions in the sponsor meetings between our team and [Professor Henri Casanova](https://henricasanova.github.io/).
 
 ### Meeting 1 (Week: 1/21 - 1/27)
 Date: Tuesday, 1/21/25
