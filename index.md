@@ -280,8 +280,8 @@ Business:
 - Discussed developing a GitHub action to display WfInstances Browser usage data
 
 Actions:
-- Renamed main repo "wfinstances-browser" to "wfinstances-browser-first-fork" (development repo was not fork of original repo from wfcommons GitHub)
-- Moved and copied the files, commits and project board over to the new wfinstances-browser repo
+- Renamed main repo "wfinstances-browser" to ["wfinstances-browser-first-fork"](https://github.com/WfInstances/wfinstances-browser-first-fork) (development repo was not fork of original repo from wfcommons GitHub)
+- Moved and copied the files, commits and project board over to the new [wfinstances-browser](https://github.com/WfInstances/wfinstances-browser) repo
 - Implemented the satisfaction database to for keeping track of score distribution
 - User survey now asks for two ratings for the app; one for usefulness and the other for usability
   
@@ -294,7 +294,8 @@ Business:
 - Discussed using shields.io to display badges for total number of downloads, visualizations, simulations, and users
 
 Actions:
-- Developed a GitHub action that periodically updates the README of the wfcommons/WfInstances repo
+- Created a new [repo](https://github.com/WfInstances/WfInstances-gitHub-actions) for developing the GitHub action
+- Completed a GitHub action that periodically updates the README of the wfcommons/WfInstances repo
 - README uses shields.io badges to show usage report from WfInstances Browser
 - Shows total number of users, visualizations, simulations, and downloads
   
@@ -307,7 +308,7 @@ Business:
 - Talked about beginning to work a draft for the poster
 
 Actions:
-- Started to work on creating a draft version for the poster
+- Started to work on creating a draft version of the poster
   
 ---
 ### Meeting 12 (Week: 4/15 - 4/21)
