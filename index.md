@@ -280,7 +280,7 @@ Business:
 - Discussed developing a GitHub action to display WfInstances Browser usage data
 
 Actions:
-- Renamed main repo "wfinstances-browser" to ["wfinstances-browser-first-fork"](https://github.com/WfInstances/wfinstances-browser-first-fork) (development repo was not fork of original repo from wfcommons GitHub)
+- Renamed main repo "wfinstances-browser" to ["wfinstances-browser-first-fork"](https://github.com/WfInstances/wfinstances-browser-first-fork) (development repo was not a fork of the original repo from the official wfcommons GitHub)
 - Moved and copied the files, commits and project board over to the new [wfinstances-browser](https://github.com/WfInstances/wfinstances-browser) repo
 - Implemented the satisfaction database to for keeping track of score distribution
 - User survey now asks for two ratings for the app; one for usefulness and the other for usability
