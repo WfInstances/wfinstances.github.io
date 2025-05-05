@@ -1,4 +1,4 @@
 remote_theme: pages-themes/cayman@v0.2.0
-description: "A user and developer guide to the WfInstances Browser. An insight into our project progression during the Spring 2025 semester!"
+description: "A user and developer guide to the WfInstances Browser. An insight into our project progression during the Spring 2025 semester!\nTeam: Jianlong Chen and Kenneth de Guzman"
 plugins:
 - jekyll-remote-theme 
