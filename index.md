@@ -320,7 +320,7 @@ Business:
 
 Actions: 
 - Modified the layout of the included sections
-- Completed polishments for final version of the poster
+- Completed polishments for final version of the [poster](https://raw.githack.com/WfInstances/wfinstances.github.io/main/poster/WfInstances%20Browser%20Final%20Poster.pdf)
 
 ## Team 
 
