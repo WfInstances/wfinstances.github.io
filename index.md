@@ -1,7 +1,3 @@
-A user and developer guide to the WfInstances Browser. An insight into our project progression during the 2025 semester!
-
-<p align="center">Jianlong Chen, Kenneth de Guzman</p>
-
 ## Table of Contents
 
 * [Overview](#overview)
