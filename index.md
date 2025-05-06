@@ -123,6 +123,7 @@ REST API documentation is available at: [http://localhost:8081/docs](http://loca
 ### issue-010: API endpoint for monthly usage
 - Changed how data is retrieved from weekly to monthly usage
 - Created new endpoint to get monthly usage data grouped by their type (download, visualization, simulation)
+  
 ### issue-011: Random Survey Pop-up
 - A random survey will pop-up when user has used download, visualization, and simulation on the 5th, 50th and 500th event
 - Asks two questions to give the app a rating based on usability and usefulness
