@@ -6,6 +6,7 @@
 * [Issues Development History](#issues-development-history)
 * [Weekly Progression](#weekly-progression)
 * [Team](#team)
+* [Project Board](#project-board)
 * [Organization](#organization)
 
 ## Overview
@@ -327,6 +328,22 @@ Actions:
 
 1. [Jianlong Chen](https://jianlongchenn.github.io/)
 2. [Kenneth de Guzman](https://k-deguz.github.io/)
+
+## Project Board
+These are the project boards for the wfinstances-browser repositories we developed. 
+<!-- Padding for space between sections-->
+<div>
+    <p class="pt-1"></p>
+</div>
+Note: The wfinstances-browser repo is a copy of the wfinstances-browser-first-fork since the latter was not a proper fork of the official WfCommons wfinstances-browser repository.
+
+<!-- Padding for space between sections-->
+<div>
+    <p class="pt-1"></p>
+</div>
+
+1. [wfinstances-browser](https://github.com/orgs/WfInstances/projects/7/views/1)
+2. [wfinstances-browser-first-fork](https://github.com/orgs/WfInstances/projects/1/views/1)
 
 ## Organization
 
